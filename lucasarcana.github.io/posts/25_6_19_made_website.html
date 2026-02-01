@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts - LucasArcana</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/script.js"></script>
+	
+</head>
+    <div class="topnav">
+        <a href="../index.html">Home</a>
+        <a href="../posts/posts_landing.html">Posts</a>
+        <a href="../about/about.html">About</a>
+    </div>
+<body>
+    <h1>I CREATED MY WEBSITE</h1>
+	<main>
+	<textarea id="markdown-input" style="display:none;">
+## How it started
+<p>There has been some anecdotes that scrolling through social media has gotten stale. They cite that it's mostly slop content which felt mind-numbing to watch at times.
+
+When I looked at the indie web or sites from the 2000s, it's as if I had revisited a small portion of my life where websites looked like this. They may have low quality assets or skeuomorphic designs.
+
+As I'm working towards finishing my IT degree, I thought now is the right time to make a website to build a portfolio and level up my programming skills while having fun.
+</p>
+
+## How it was made
+<p>I was going to use Neocities because of the simplicity with making website in HTML and CSS but went with GitHub Pages instead because of the option to use JavaScript. At first, I was going to use Jekyll to select any theme available but I ended up making a custom theme with raw CSS.
+
+A common trend seen in current websites is the minimalistic look with white or sterile colour palettes. I wanted to divert from this because it felt like you're visiting the website for the sake of and not the slow, reflective approach of appreciating one's work.
+
+Taking inspiration from games like NieR:Automata and Outer Wilds, I used fonts and UI that resemble the ones found in the games to achieve a computer-like effect when moving from page-to-page.
+</p>
+
+## What's next
+<p>Now that I have laid the foundation of the website, I'm keen to share any topics that I'm interested in. It may not be too flashy like clickbaity YouTube videos but the goal is to have fun sharing what I like.
+</p>
+	</textarea>
+	<div id="markdown-output"></div>
+
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script><!--markedjs library-->
+	<script>
+		const markdown = document.getElementById('markdown-input').value;
+		document.getElementById('markdown-output').innerHTML = marked.parse(markdown)
+	</script>
+    <script src="https://utteranc.es/client.js"
+        repo="lucasarcana/lucasarcana.github.io"
+        issue-term="pathname"
+        theme="icy-dark"
+        crossorigin="anonymous"
+        async>
+    </script>
+    </main>
+</body>
+</html>
